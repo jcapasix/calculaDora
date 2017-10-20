@@ -9,7 +9,7 @@ def ARTEFACTORY = [
   PUBLISH_ARTEFACTORY : 1,
   UNIT_TEST : 1,
   RUTA_ARTEFACTORY:"",
-  BUILD_FLAVOR:"Calculadora",   //define el flavor de compilacion |DeployStore|Corporate
+  BUILD_FLAVOR:"alculadora",   //define el flavor de compilacion |DeployStore|Corporate
    ETIQUETA_SLAVE:"mac",  //"casa" //etiqueta del slave jenkins si es vacio se compila en el master,
   NAME_FILE_ARTEFACTORY:""
 ]
@@ -101,7 +101,7 @@ def enviarMailError( ){
 def enviarMail(subject, body){
     def date = new Date().format( 'dd/MM/yyyy HH:mm:ss' )
     def BODY_MAIL = "${body} <br> a las ${date} <br><br><br> Por favor no replicar este correo."
-    def DEFAULT_RECIPIENTS="eespinor@everis.com, jordan.capa.sixe@everis.com"
+    def DEFAULT_RECIPIENTS="jcapasix@gmail.com"
 
     mail( body: "${BODY_MAIL}",
           from: "everisdemo123@gmail.com",
