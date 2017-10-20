@@ -28,8 +28,8 @@ node (ARTEFACTORY.ETIQUETA_SLAVE){//etiqueta del slave ios
  
 
                   stage("BUILD ARTEFACTORY"){
-                      sh("./xcodebuild -scheme Calculadora clean archive -archivePath build/Calculadora")
-					   sh("./xcodebuild -exportArchive -archivePath 'build/Calculadora.xcarchive' -exportOptionsPlist exportOptions.plist -exportPath $PWD/build")
+                      sh("xcodebuild -scheme Calculadora clean archive -archivePath build/Calculadora")
+					   sh("xcodebuild -exportArchive -archivePath 'build/Calculadora.xcarchive' -exportOptionsPlist exportOptions.plist -exportPath $PWD/build")
                   }
 
 
