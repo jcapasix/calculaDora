@@ -13,5 +13,5 @@ Ejemplo calculadora Xcode
 **xcodebuild -exportArchive -archivePath "build/Calculadora.xcarchive" -exportOptionsPlist exportOptions.plist -exportPath $PWD/build**
 
 **Para Xcode 9:**
-- Si no sabemos como configurar el archivo exportOptions.plist, podemos generarlo por primer vez de la siguiente forma:
-Product>Archive, luego exportar el archivo .ipa, en la carpeta encontraremos el archivo exportOptions.plist ya configurado.
+- Si no sabemos como configurar el archivo exportOptions.plist podemos generarlo por primer vez de la siguiente manera:
+Product > Archive -> Export > [App Store], en la carpeta que creamos al exportar el archivo .ipa encontraremos el archivo **exportOptions.plist** ya configurado.
