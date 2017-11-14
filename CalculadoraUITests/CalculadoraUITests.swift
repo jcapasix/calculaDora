@@ -28,9 +28,28 @@ class CalculadoraUITests: XCTestCase {
         super.tearDown()
     }
     
+    func suma(){
+        
+    }
+    
     func testExample() {
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+ 
+        
+        let app = XCUIApplication()
+        let element = app.otherElements.containing(.staticText, identifier:"00").element
+        element.tap()
+        
+        let elementsQuery = app.otherElements.containing(.staticText, identifier:"00")
+        let textField = elementsQuery.children(matching: .textField).element(boundBy: 0)
+        textField.tap()
+        textField.typeText("2")
+        
+        let textField2 = elementsQuery.children(matching: .textField).element(boundBy: 1)
+        textField2.tap()
+        textField2.typeText("2")
+        element.tap()
+        app.buttons["+"].tap()
+
     }
     
 }
